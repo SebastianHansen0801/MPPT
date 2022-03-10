@@ -1,7 +1,7 @@
 #Main application file name
-MAIN_APP = main
+MAIN_APP = --NAME--
 #Main hex file path in windows format
-MAIN_HEX_PATH = C:\Users\sebas\Desktop\foldert\blink_test\$(MAIN_APP).hex
+MAIN_HEX_PATH = --PATH--\$(MAIN_APP).hex
 
 # Compiler and other Section
 CC = C:\wiring-0101-windows\tools\avr\bin\avr-gcc
