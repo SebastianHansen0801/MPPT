@@ -1,12 +1,12 @@
 #Main application file name
-MAIN_APP = NAME
+MAIN_APP = --NAME--
 #Main hex file path in windows format
-MAIN_HEX_PATH = PATH\\$(MAIN_APP).hex
+MAIN_HEX_PATH = --PATH--\$(MAIN_APP).hex
 
 # Compiler and other Section
 CC = avr-gcc
 OBJCOPY = avr-objcopy.exe
-AVRDUDE := avrdude
+AVRDUDE := C:\wiring-0101-windows\tools\avr\bin\avrdude
 
 #Options for avr-gcc
 CFLAGS = -g -Os -o
@@ -19,15 +19,12 @@ HFLAGS = -j .text -j .data -O ihex
 
 #Options for avrdude to burn the hex file
 #MMCU model here according to avrdude options
-DUDEFLAGS = -c
-DUDEFLAGS += arduino
-DUDEFLAGS += -p
-DUDEFLAGS += atmega2560  
-DUDEFLAGS += -P 
-DUDEFLAGS += COM9 
-DUDEFLAGS += -b 
-DUDEFLAGS += 115200 
-DUDEFLAGS += -U flash:w:$(MAIN_HEX_PATH):i
+DUDEFLAGS = -cwiring
+DUDEFLAGS += -pm2560  
+DUDEFLAGS += -PCOM9 
+DUDEFLAGS += -b115200 
+DUDEFLAGS += -D
+DUDEFLAGS += -Uflash:w:$(MAIN_HEX_PATH):i
 
 # Sources files needed for building the application 
 SRC = $(MAIN_APP).c
