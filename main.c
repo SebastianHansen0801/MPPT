@@ -8,8 +8,6 @@
 
 int main() {
 
-    DDRB |= (1<<DDB7);
-
     while(1) {
 
     }
