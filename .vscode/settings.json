@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "uart.h": "c",
+        "timer.h": "c",
+        "adc.h": "c",
+        "pwm.h": "c",
+        "io.h": "c",
+        "mppt.h": "c"
+    }
+}
